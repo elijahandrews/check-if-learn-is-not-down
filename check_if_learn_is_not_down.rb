@@ -23,7 +23,7 @@ Gmail.new(address, password) do |gmail|
     rescue
       errored = true
     end
-    if page.body =~ /maintenance\.jpg/ || errored # that blue gear we are all tired of
+    if page.body =~ /maintenance\.jpg/ || errored # maintenance.jpg == that blue gear we are all tired of
       errored = false
       puts "#{ Time.now }: Still down. Waiting 5 minutes."
       sleep(300) # wait 5 minutes
