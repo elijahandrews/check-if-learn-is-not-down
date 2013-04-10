@@ -15,6 +15,7 @@ puts "Logging in to gmail..."
 Gmail.new(address, password) do |gmail|
   puts "Logged in"
   br = Mechanize.new
+  br.read_timeout = 20
 
   loop do
     puts "#{ Time.now }: Checking Learn..."
@@ -23,7 +24,7 @@ Gmail.new(address, password) do |gmail|
     rescue
       errored = true
     end
-    if page.body =~ /maintenance\.jpg/ || errored # maintenance.jpg == that blue gear we are all tired of
+    if errored || page.nil? || page.body =~ /maintenance\.jpg/ # maintenance.jpg == that blue gear we are all tired of
       errored = false
       puts "#{ Time.now }: Still down. Waiting 5 minutes."
       sleep(300) # wait 5 minutes
