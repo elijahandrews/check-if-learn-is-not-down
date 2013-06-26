@@ -3,10 +3,7 @@ check-if-learn-is-not-down
 
 On Tuesday, January 29th 2013, https://learn.uwaterloo.ca went down. Without our beloved Learn, panic struck the hearts of all Univeristy of Waterloo students. This Ruby script checks if Learn is still down every 5 minutes. If it finds Learn not down, it ensures near instantaneous rejoice by sending you an email.
 
-EDIT: As of February 1st 2013, Learn is back. However, this tool may once again be useful if Learn goes down again.
-
-EDIT2: As of April 10th 2013, Learn is down again.
-
+EDIT: Learn has since returned! However, this tool may be useful if Learn ever goes down again.
 ## Setup
 Make sure you have [Ruby](http://www.ruby-lang.org/en/downloads/) and [nokogiri](http://nokogiri.org/tutorials/installing_nokogiri.html)
 
